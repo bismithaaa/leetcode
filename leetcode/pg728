@@ -1,0 +1,15 @@
+def selfdiv(left,right):
+    li=[]
+    for i in range(left,right+1):
+        temp=i
+        flag=True
+        while i!=0:
+            rem=i%10
+            if rem==0 or temp%rem!=0:
+                flag=False
+                break
+            i//=10
+        if flag:
+            li.append(temp)
+    return li
+print(selfdiv(47,85))
