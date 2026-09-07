@@ -1,0 +1,8 @@
+def move_zeroes(nums):
+    count = nums.count(0)
+    while 0 in nums:
+        nums.remove(0)
+    for i in range(count):
+        nums.append(0)
+    return nums
+print(move_zeroes([0, 5, 15, 0, 33, 0, 2, 0, 1]))

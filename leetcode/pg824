@@ -1,12 +1,13 @@
-sentence="I speak Goat Latin"
-vowels="aeiou"
-index=1
-res=[]
-for i in sentence.split():
-    if i[0].lower() in vowels:
-        w=i+"ma"+index*"a"
-    else:
-        w=i[1:]+i[0]+"ma"+index*"a"
-    res.append(w)
-    index+=1
-print(" ".join(res))
+def to_goat_latin(sentence):
+    vowels = "aeiou"
+    index = 1
+    res = []
+    for i in sentence.split():
+        if i[0].lower() in vowels:
+            w = i + "ma" + index * "a"
+        else:
+            w = i[1:] + i[0] + "ma" + index * "a"
+        res.append(w)
+        index += 1
+    return " ".join(res)
+print(to_goat_latin("I speak Goat Latin"))
